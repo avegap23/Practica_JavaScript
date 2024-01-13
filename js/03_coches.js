@@ -14,6 +14,20 @@ const c5 = new Coche('Opel', 'Corsa', 5000, 2003);
 
 const listaCoches = [c1, c2, c3, c4, c5];
 
-listaCoches.forEach(c => {
-    console.log(c);
+listaCoches.forEach(coche => {
+    console.log(coche);
 });
+
+// 5)
+function rebajaCoches(arr_coches, descuento_porciento) {
+    arr_coches.forEach(coche => {
+        for (precio in coche) {
+            precio = precio - (precio * descuento_porciento);
+        }
+    });
+    return arr_coches;
+}
+
+console.log("-----------------------------------");
+
+console.log(rebajaCoches(listaCoches, 15));
