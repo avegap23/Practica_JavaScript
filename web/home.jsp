@@ -75,8 +75,8 @@
                                     </div>
                                     <div class="card-footer text-center">
                                         <button class="btn btn-success" data-bs-toggle="modal"
-                                            data-bs-target="#modalmovies"
-                                            data-bs-person="${person.id}">FILMOGRAFÍA</button>
+                                            data-bs-target="#modalmovies" data-bs-person="${person.id}"
+                                            data-bs-nombre="${person.nombre}">FILMOGRAFÍA</button>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +116,9 @@
                         <div class="modal-content">
                             <h3 class="modal-title bg-dark text-success text-center">Movies</h3>
                             <div class="modal-header">
-                                <h4 class="text-success"></h4>
+                                <h4 class="text-success">
+                                    <!-- Pelis -->
+                                </h4>
                             </div>
                             <div class="modal-body" id="movies">
                             </div>
@@ -126,6 +128,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- Bootstrap JavaScript Libraries -->
                 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
                     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -134,6 +137,8 @@
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
                     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
                     crossorigin="anonymous"></script>
+                    
+                <script type="text/javascript" src="js/js.js"></script>
             </body>
 
             </html>

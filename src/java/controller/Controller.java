@@ -1,5 +1,6 @@
 package controller;
 
+import entities.Person;
 import java.io.IOException;
 import java.util.List;
 
@@ -59,6 +60,7 @@ public class Controller extends HttpServlet {
 		}
                 case "menu": {
                     String quieren = request.getParameter("quieren");
+                    
                     if (quieren.equals("person")) {
                         q = em.createQuery("select p from Person p");
                         people = q.getResultList();
@@ -74,6 +76,13 @@ public class Controller extends HttpServlet {
                     request.getRequestDispatcher("home.jsp").forward(request, response);
 			break;
                 }
+                case "filmografia": {
+                    String idperson = request.getParameter("person");
+                    Person person = em.find(Person.class, Integer.parseInt("idperson"));
+                        
+                    request.getRequestDispatcher("movies.jsp").forward(request, response);
+                    break;
+		}
 		default:
 			throw new IllegalArgumentException("Unexpected value: " + op);
 		}
