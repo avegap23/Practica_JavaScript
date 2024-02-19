@@ -1,9 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -52,7 +49,7 @@ public class Controller extends HttpServlet {
 			// .........
 			// session.setAttribute("Key", objeto);
 			// request.setAttribute("Key", objeto);
-			request.getRequestDispatcher("page.jsp").forward(request, response);
+			request.getRequestDispatcher("home.jsp").forward(request, response);
 			break;
 		}
 		default:
